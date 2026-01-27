@@ -1,4 +1,4 @@
-/*const value doent change , cant redeclered reasssign */
+/*const value doesnt change , cant redeclered reasssign */
 // const s=2;
 // console.log(s);
 // s=3;
