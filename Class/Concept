@@ -1,0 +1,23 @@
+//What is Web Technology
+-->Web Technology is used to create interactive and dynamic web pages 
+by using technologies like HTML, CSS, JavaScript, Node.js, React, etc.
+
+//Real time example of web technology
+-->eg.Flipcart,amazon,instagram,w3school etc.
+
+//What is javascript
+-->JavaScript is a programming language used to make web pages interactive/dynamic.
+
+//File extension for javascript
+-->.js extension is used. for eg Experiment.js.
+
+//Why do we use Node.js
+-->Nodejs is used to run the code outside the browser.
+
+DOM:Document object Model
+use:it is programming interface for html.bridge between js and html
+we learn core js but js alone can not change web pages so DOM is used.
+
+when html page load on browser html convert into object that structure is called DOM
+
+

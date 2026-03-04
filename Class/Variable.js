@@ -36,7 +36,6 @@ c = 20; // Error
  1.Object
  2.Array
  3.Function
- 4.Date
  */
  
  

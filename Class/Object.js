@@ -42,5 +42,6 @@ user.greeting=function()
 console.log(user.greeting())
 
 user.greeting2=function(){
-    console.log(`${this.email}`)//when we have to access key in function use this.
+    console.log(`email is:${this.email}`)//when we have to access key in function use this.
 }
+console.log(user.greeting2())

@@ -1,0 +1,230 @@
+/*
+//1.Variables & Data Types:
+
+Variables are container for Data
+ let accountId = 101; //Number
+ let accountEmail = "amrutapowar" //string
+ let isAvailable=true; //boolean
+ let value; //undefined
+ let price=null; //null
+ let big = 1234567890123456789012345n;  //BigInt
+//let,var & const keyword
+1.let:we can reassigned but cannot be redeclared.block scope(with in {})
+let a = 10;
+a = 20;     // allowed
+let a = 30; //not allowed
+2.var:can be redeclared & reassigned is allowed.global scope(in overall code)
+var x = 10;
+var x = 20;   // allowed
+x = 30;       // allowed
+console.log(x); // 30
+3.const:cannot be reassigned redeclared.block scope(with in {})
+Must be initialized at declaration
+const age = 10;
+age = 20; // Error
+const a;//error.must give the value
+
+//Data Types
+1.primitive(7)
+1.Number let price=10
+2.string fullName="Amruta Powar"
+3.boolean isFollow=true
+4.undefined let x;
+5.null let a=null
+6.BigInt let big = 1234567890123456789012345n; 
+7.Symbol let y=Symbol("hello")
+
+2.Non-primitive
+1.objects:it is collection of values.key value pair is there
+const student={
+    name:"amruta",
+    age:21,
+    city:"kagal"
+}
+console.log(student["age"])
+console.log(student.age)//when we use . dont use ""
+in the const object we can change the keys
+here we can change student["name"]="Shweta"
+2.Array
+3.Function
+
+
+//2.Operators & Conditional Statements:
+
+Operators:
+used to perform some operations.
+1.Arithmetic Operators:+,-,*,/,%,increment,decrement,**(power to the)
+unary Operators:increment,decrement
+2.Assignment Operators:=,+=,-=
+3.comparision Operators:==(equql to),===(equql to & type),!=
+4.Logical Operators:&&,||,!
+
+//Conditional Statements
+implement some conditions in the code
+if-else
+
+//Ternary Operators
+condition?true output:false output
+age>18?"adult":"not adult";
+
+//3.Loops & String:
+
+loops execute the piece of code again & again
+1.for loop
+for(let i=1;i<5;i++)
+2.while loop 
+while(condition){
+    //code
+}
+3.do-while
+do{
+    //code
+}while(condition);
+here code atleast runs one time because we check condtion after run do Statement
+4.for-of loop
+for(let val of Variable){
+    //code
+}
+5.for-in loop
+it return the key in object
+
+//String in js
+it is a sequence of characters
+it is immutable(cant change)
+let str="Amruta"
+console.log(string.length)//give length
+
+//Template Literals
+it is a special string
+used backticks ``
+use:we write string with Variables
+let obj={
+    item:"pen",
+    price:10
+}
+//console.log("price of",obj.item,"is",obj.price,"rupees")
+let output=`the price of ${obj.item} is ${obj.price} rupees`
+console.log(output)
+it also called string interpolation
+
+//methods in string
+str.toUpperCase()//give in capital letters
+str.toLowerCase()//give in small letters
+str.trim()//removes the space before and after the string
+
+
+//4.Array:
+
+collection of items
+it is mutable
+Array.length//give the length
+type of arrray is object so in js we store diff type of elements in Array
+when we try to access the index which is not present in array output will be undefined
+
+//Array methods
+Push() //add at the end
+Pop() //delete element from the end
+toString() //converts array into string
+concat()//joins multiple array and returns new array
+unshift()//add the elements in the start
+shift()//delete from the start
+slice()//return piece of array.we give start and end index it cant change original array.ending index is exclusive
+splice()//change the original array.take 3 parameters
+splice(startindex,deletecount,newelement)
+
+
+//5.Function & methods:
+
+function is block of code which perfrom the specific task
+function add(a,b){//defination
+   console.log(a+b)
+}
+add(4,5)//call
+
+//arrow function 
+compact way of writing function
+const functionName=(parameters)=>{
+    //code
+}
+const sum=(a,b)=>{
+    console.log(a+b)
+}
+sum(4,5)
+
+//for-each
+function is associated with object is call method
+Ex toUppercase is used with object that is string therefore toUppercase is a method.to use toUppercase we need string
+method is nothing but function associated with object
+for-each is a function associated with array or string so it is a method
+
+arr.forEach(callBackFunction)
+callBackFunction is a function that passed as an argument to another function
+Ex.
+function hello(){
+    console.log("hello")
+}
+function myFun(hello){
+    return hello
+}
+//higher order function/method
+that takes another function as a parameter or return another fun as output.forEach is a higher order function
+in the callback fun there are 3 parameters which is optional
+1.value 2.index 3.array itself
+ 
+//Array methods
+1.Map
+similar to forEach 1 diff is there map creates the new array with Result. for each does not create new array.
+arr.map(callBackFunction())
+for-each used when we have to calculate somthing and map is used when we have to create new array.
+
+2.filter
+creates the new array of that elements which satisfy the given condition.
+
+3.reduce
+perform some perations and reduce the array to a single value and return it.
+e.x. in calculate the sum or avg we take many values as input and return only one value s output.at that time use reduce
+
+//DOM:
+Document Object Model  
+<style>:connect HTML with CSS
+<script>connect HTML with JS
+when web pages is loaded the browser creates DOM of the page
+it is a tree like structure
+window->document->html->1.head:meta,title,link
+                        2.body:div(img,h1,p,div),script
+
+
+Dom Manipulation:
+
+1.selecting with id:document.getElementById("id").used # to select id suppose is is heading then when we apply css write #heading.it is unique
+2.selecting using class:document.getElementByClassName("classname")
+when we have to apply same properties t that time we use class.used. in css to write
+<h1 class="heading">Amruta</h1>
+<h2  class="heading">From kagal</h2>
+<h3  class="heading">learing js</h3>
+and when apply style in external css write
+.heading{
+apply properties here 
+color:
+background-color:
+}
+it will apply to h1,h2,h3
+
+this is a way to acces to elements from the page.Query Selector is better way from this
+Query Selector:
+in the query Selector we can pass id ,class tag.
+documwnt.querySelector("p") herewe give p then it gives 1st element which has id or class or tag p
+documwnt.querySelectorAll("p") it give all elements which id or class or tag is p
+classname written with . and id with #
+
+
+//8.Events
+the chang in the state of an object is known as an event E.X.clicking the button
+1.Mouse events(click,double click)
+2.Keyboard events(keypress,keyup,keydown)
+3.Form events(submit)        
+4.print somethig is also one type of event
+
+
+
+*/
